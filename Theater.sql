@@ -106,6 +106,7 @@ CREATE TABLE Seat (
     RowNumber int NOT NULL,
     Area varchar(255) NOT NULL,
     HallID int NOT NULL,
+    Sold boolean,
     PRIMARY KEY (SeatNumber, RowNumber, Area, HallID),
     FOREIGN KEY (HallID) REFERENCES TheaterHall(HallID)
 );
