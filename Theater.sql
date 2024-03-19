@@ -1,6 +1,4 @@
-
-
---SQL script to create the database for DB1 of project in TDT4145.
+-- SQL script to create the database for DB1 of project in TDT4145.
 --    By: 
 --    Group 113
 --    Christer Justad Krane

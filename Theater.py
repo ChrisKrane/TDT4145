@@ -1,8 +1,7 @@
 import sqlite3
 
-connection = sqlite3.connect("Theater.db")
-
 def createDatabase():
+    connection = sqlite3.connect("Theater.db")
     cursor = connection.cursor()
 
     # Separate the commands from the sql file
@@ -10,7 +9,7 @@ def createDatabase():
     sqlAsAString = sqlFile.read()
     sqlFile.close()
 
-    sqlCommands = sqlAsAString.split(";")   # split the commands by semicolon
+    sqlCommands = sqlAsAString.split(";") # split the commands by semicolon
 
     ## Execute every command from the input file
     for command in sqlCommands:
@@ -20,6 +19,6 @@ def createDatabase():
         except sqlite3.OperationalError as msg:
             print("Command skipped: ", msg)
 
+    connection.close()
 
 
-connection.close()
