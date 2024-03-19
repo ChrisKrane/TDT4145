@@ -42,6 +42,12 @@ CREATE TABLE TheaterHall (
 CREATE TABLE Play (
   PlayID int NOT NULL,
   PlayName varchar(255),
+  Ordinary int,
+  Honour int,
+  Student int,
+  Child int,
+  Group int,
+  HonourGroup int,
   Season varchar(255) NOT NULL,
   HallID int NOT NULL,
   PRIMARY KEY (PlayID),
