@@ -1,4 +1,20 @@
-SELECT Play.Name, Actor.Name, Role.Name 
-FROM Play
+Oppgave 5) Henter navn, stykkenavn og rollenavn på skuespillere 
+
+SELECT Play.PlayName AS Play,
+       Actor.Name AS Actor,
+       Role.Name AS Role
+FROM Play 
 JOIN Role ON Play.PlayID = Role.PlayID
-JOIN Skuespiller ON Rolle.skuespiller_id = Skuespiller.skuespiller_id;
+JOIN PlaysInRole ON Role.RoleID = PlaysInRole.RoleID
+JOIN Actor ON PlaysInRole.ActorID = Actor.ActorID;
+
+Oppgave 6) Henter Stykke, dato for forestillingen og antall solgte billetter for forestillingene i synkende rekkefølge
+
+SELECT Play.PlayName AS Play,
+       Performance.Date AS Date,
+       COUNT(Ticket.TicketID) AS Sold_seats
+FROM Play 
+JOIN Performance ON Play.PlayID = Performance.PlayID
+JOIN Ticket ON Performance.PerformanceID = Ticket.PerformanceID
+GROUP BY Play.PlayName, Performance.Date
+ORDER BY Sold_seats DESC;
