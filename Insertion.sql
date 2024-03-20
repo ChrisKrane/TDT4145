@@ -93,11 +93,11 @@ INSERT INTO Actor VALUES (18, 'Natalie Grøndahl Tangen');
 INSERT INTO Actor VALUES (19, 'Åsmund Flaten');
 
 INSERT INTO Act VALUES (1, 1, null);
-INSERT INTO Act VALUES (2, 1, null);
-INSERT INTO Act VALUES (3, 1, null);
-INSERT INTO Act VALUES (4, 1, null);
-INSERT INTO Act VALUES (5, 1, null);
 INSERT INTO Act VALUES (1, 2, null);
+INSERT INTO Act VALUES (1, 3, null);
+INSERT INTO Act VALUES (1, 4, null);
+INSERT INTO Act VALUES (1, 5, null);
+INSERT INTO Act VALUES (2, 1, null);
 
 INSERT INTO RoleInAct VALUES (1, 1, 1);
 INSERT INTO RoleInAct VALUES (1, 1, 2);
