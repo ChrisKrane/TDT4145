@@ -1,4 +1,5 @@
 from Theater import createDatabase
+from InitializeTheater import initializeDatabase
 import sqlite3
 
 def main():
@@ -16,6 +17,12 @@ def main():
                 print("Database created successfully")
             except sqlite3.Error as msg:
                 print("An error occurred: ", msg)
+        elif choice == "-fill":
+            try:
+                initializeDatabase()
+                print("Database filled successfully")
+            except sqlite3.Error as msg:
+                print("An error occurred: ", msg)
         elif choice == "-open":
             #openDatabase()
             print("Not implemented yet")
@@ -29,6 +36,7 @@ def main():
 
 def help():
     print("'-init' : Create a new database")
+    print("'-fill' : Fill a database with sample data")
     print("'-open' : Open an existing database")
     print("'-q' : Exit")
     print("'-help' : for a list of commands")

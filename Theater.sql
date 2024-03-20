@@ -46,7 +46,7 @@ CREATE TABLE Play (
   Honour int,
   Student int,
   Child int,
-  Group int,
+  "Group" int,
   HonourGroup int,
   Season varchar(255) NOT NULL,
   HallID int NOT NULL,
