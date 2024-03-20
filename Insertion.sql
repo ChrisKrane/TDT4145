@@ -25,7 +25,7 @@ INSERT INTO Performance VALUES (5, '2024-02-06', '19:00', 1);
 
 INSERT INTO Performance VALUES (6, '2024-02-03', '18:30', 2);
 INSERT INTO Performance VALUES (7, '2024-02-06', '18:30', 2);
-INSERT INTO Performance VALUES (8, '2024-02-06', '18:30', 2);
+INSERT INTO Performance VALUES (8, '2024-02-07', '18:30', 2);
 INSERT INTO Performance VALUES (9, '2024-02-12', '18:30', 2);
 INSERT INTO Performance VALUES (10, '2024-02-13', '18:30', 2);
 INSERT INTO Performance VALUES (11, '2024-02-14', '18:30', 2);
