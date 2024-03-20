@@ -47,16 +47,16 @@ INSERT INTO Performance VALUES (9, '2024-02-12', '18:30', 2);
 INSERT INTO Performance VALUES (10, '2024-02-13', '18:30', 2);
 INSERT INTO Performance VALUES (11, '2024-02-14', '18:30', 2);
 
-INSERT INTO Employee VALUES (1, null, 'Yury Butusov', 'Innleid', 1); 
-INSERT INTO Employee VALUES (2, null, 'Aleksandr Shishkin-Hokusai', 'Innleid', 1); 
-INSERT INTO Employee VALUES (3, null, 'Eivind Myren', 'Fast ansatt', 1); 
-INSERT INTO Employee VALUES (4, null, 'Mina Rype Stokke', 'Innleid', 1); 
+INSERT INTO Employee VALUES (1, 'butusov@theater.no', 'Yury Butusov', 'Innleid', 1); 
+INSERT INTO Employee VALUES (2, 'shishkin-hokusai@theater.no', 'Aleksandr Shishkin-Hokusai', 'Innleid', 1); 
+INSERT INTO Employee VALUES (3, 'myren@theater.no', 'Eivind Myren', 'Fast ansatt', 1); 
+INSERT INTO Employee VALUES (4, 'stokke@theater.no', 'Mina Rype Stokke', 'Innleid', 1); 
 
-INSERT INTO Employee VALUES (5, null, 'Jonas Corell Petersen', 'Innleid', 2);
-INSERT INTO Employee VALUES (6, null, 'David Gehrt', 'Midlertidig ansatt', 2);
-INSERT INTO Employee VALUES (7, null, 'Gaute Tønder', 'Innleid', 2);
-INSERT INTO Employee VALUES (8, null, 'Magnus Mikaelsen', 'Innleid', 2);
-INSERT INTO Employee VALUES (9, null, 'Kristoffer Spender', 'Innleid', 2);
+INSERT INTO Employee VALUES (5, 'petersen@theater.no', 'Jonas Corell Petersen', 'Innleid', 2);
+INSERT INTO Employee VALUES (6, 'gehrt@theater.no', 'David Gehrt', 'Midlertidig ansatt', 2);
+INSERT INTO Employee VALUES (7, 'tønder@theater.no', 'Gaute Tønder', 'Innleid', 2);
+INSERT INTO Employee VALUES (8, 'mikaelsen@theater.no', 'Magnus Mikaelsen', 'Innleid', 2);
+INSERT INTO Employee VALUES (9, 'spender@theater.no', 'Kristoffer Spender', 'Innleid', 2);
 
 INSERT INTO Task VALUES (1, 'Regissør');
 INSERT INTO Task VALUES (2, 'Scenografi');
@@ -109,12 +109,12 @@ INSERT INTO Actor VALUES (17, 'Trond-Ove Skrødal');
 INSERT INTO Actor VALUES (18, 'Natalie Grøndahl Tangen');
 INSERT INTO Actor VALUES (19, 'Åsmund Flaten');
 
-INSERT INTO Act VALUES (1, null, 1);
-INSERT INTO Act VALUES (2, null, 1);
-INSERT INTO Act VALUES (3, null, 1);
-INSERT INTO Act VALUES (4, null, 1);
-INSERT INTO Act VALUES (5, null, 1);
-INSERT INTO Act VALUES (1, null, 2);
+INSERT INTO Act VALUES (1, 1, null);
+INSERT INTO Act VALUES (2, 1, null);
+INSERT INTO Act VALUES (3, 1, null);
+INSERT INTO Act VALUES (4, 1, null);
+INSERT INTO Act VALUES (5, 1, null);
+INSERT INTO Act VALUES (1, 2, null);
 
 INSERT INTO RoleInAct VALUES (1, 1, 1);
 INSERT INTO RoleInAct VALUES (1, 1, 2);

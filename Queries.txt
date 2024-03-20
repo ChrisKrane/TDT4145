@@ -1,0 +1,4 @@
+SELECT Play.Name, Actor.Name, Role.Name 
+FROM Play
+JOIN Role ON Play.PlayID = Role.PlayID
+JOIN Skuespiller ON Rolle.skuespiller_id = Skuespiller.skuespiller_id;
