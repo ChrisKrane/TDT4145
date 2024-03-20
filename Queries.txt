@@ -18,3 +18,34 @@ JOIN Performance ON Play.PlayID = Performance.PlayID
 JOIN Ticket ON Performance.PerformanceID = Ticket.PerformanceID
 GROUP BY Play.PlayName, Performance.Date
 ORDER BY Sold_seats DESC;
+
+SELECT Actor.Name, Act.Number, Play.PlayName
+FROM Actor 
+inner join PlaysInRole 
+on Actor.ActorID = PlaysInRole.ActorID 
+inner join Role 
+on PlaysInRole.RoleID = Role.RoleID
+inner join RoleInAct
+on Role.RoleID = RoleInAct.RoleID
+inner join Act
+on RoleInAct.PlayID and RoleInAct.Number = Act.PlayID and Act.Number
+inner join Play
+on Act.PlayID = Play.PlayID
+WHERE Act.PlayID IN (
+    SELECT Play.PlayID
+    FROM Actor
+    INNER JOIN PlaysInRole ON Actor.ActorID = PlaysInRole.ActorID
+    INNER JOIN Role ON PlaysInRole.RoleID = Role.RoleID
+    INNER JOIN RoleInAct ON Role.RoleID = RoleInAct.RoleID AND RoleInAct.PlayID = Role.PlayID
+    INNER JOIN Act ON RoleInAct.PlayID = Act.PlayID AND RoleInAct.Number = Act.Number
+    INNER JOIN Play ON Act.PlayID = Play.PlayID
+    WHERE Actor.Name = "Arturo Scotti"
+) AND Act.Number IN (
+    SELECT Act.Number
+    FROM Actor
+    INNER JOIN PlaysInRole ON Actor.ActorID = PlaysInRole.ActorID
+    INNER JOIN Role ON PlaysInRole.RoleID = Role.RoleID
+    INNER JOIN RoleInAct ON Role.RoleID = RoleInAct.RoleID AND RoleInAct.PlayID = Role.PlayID
+    INNER JOIN Act ON RoleInAct.PlayID = Act.PlayID AND RoleInAct.Number = Act.Number
+    WHERE Actor.Name = "Arturo Scotti"
+);

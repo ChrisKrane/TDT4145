@@ -106,7 +106,7 @@ CREATE TABLE Seat (
     RowNumber int NOT NULL,
     Area varchar(255) NOT NULL,
     HallID int NOT NULL,
-    Sold boolean,
+    Available boolean,
     PRIMARY KEY (SeatNumber, RowNumber, Area, HallID),
     FOREIGN KEY (HallID) REFERENCES TheaterHall(HallID)
 );
@@ -115,16 +115,18 @@ CREATE TABLE Ticket (
     TicketID int NOT NULL,
     Price float,
     CostumerGroup varchar(255),
-    TimeOfSale datetime,
+    DateOfSale date NOT NULL,
+    TimeOfSale time,
     PerformanceID int NOT NULL,
     CostumerID int NOT NULL,
-    SeatNumber int,
-    RowNumber int,
-    Area varchar(255),
+    SeatNumber int NOT NULL,
+    RowNumber int NOT NULL,
+    Area varchar(255) NOT NULL,
     HallID int NOT NULL,
     PRIMARY KEY (TicketID),
     FOREIGN KEY (PerformanceID) REFERENCES Performance(PerformanceID),
     FOREIGN KEY (CostumerID) REFERENCES Costumer(CostumerID)
+    FOREIGN Key (SeatNumber, RowNumber, Area, HallID) REFERENCES Seat(SeatNumber, RowNumber, Area, HallID)
 );
 
 CREATE TABLE CostumerProfile (
