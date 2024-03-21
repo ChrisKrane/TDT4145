@@ -1,35 +1,10 @@
-Oppgave 4) 
-SELECT Play.PlayName, COUNT(Ticket.TicketID) AS Sold_seats
-FROM Play LEFT JOIN Performance ON Play.PlayID = Performance.PlayID
-          LEFT JOIN Ticket ON Performance.PerformanceID = Ticket.PerformanceID
-WHERE Performance.Date = '2024-02-01'
-GROUP BY Play.PlayID
-ORDER BY Play.PlayName
+import sqlite3
 
-
-Oppgave 5) Henter navn, stykkenavn og rollenavn på skuespillere 
-
-SELECT Play.PlayName AS Play,
-       Actor.Name AS Actor,
-       Role.Name AS Role
-FROM Play 
-JOIN Role ON Play.PlayID = Role.PlayID
-JOIN PlaysInRole ON Role.RoleID = PlaysInRole.RoleID
-JOIN Actor ON PlaysInRole.ActorID = Actor.ActorID;
-
-Oppgave 6) Henter Stykke, dato for forestillingen og antall solgte billetter for forestillingene i synkende rekkefølge
-
-SELECT Play.PlayName AS Play,
-       Performance.Date AS Date,
-       COUNT(Ticket.TicketID) AS Sold_seats
-FROM Play 
-JOIN Performance ON Play.PlayID = Performance.PlayID
-JOIN Ticket ON Performance.PerformanceID = Ticket.PerformanceID
-GROUP BY Play.PlayName, Performance.Date
-ORDER BY Sold_seats DESC;
-
-Oppgave 7)
-SELECT Actor.Name, Act.Number, Play.PlayName
+def FindCoActors(ActorName):  
+    try: 
+        conn = sqlite3.connect('Theater.db')
+        c = conn.cursor()
+        c.execute(f'''SELECT Actor.Name, Act.Number, Play.PlayName
                       FROM Actor INNER JOIN PlaysInRole ON Actor.ActorID = PlaysInRole.ActorID 
                                  INNER JOIN Role ON PlaysInRole.RoleID = Role.RoleID
                                  INNER JOIN RoleInAct ON Role.RoleID = RoleInAct.RoleID
@@ -42,11 +17,19 @@ SELECT Actor.Name, Act.Number, Play.PlayName
                                             INNER JOIN RoleInAct ON Role.RoleID = RoleInAct.RoleID AND RoleInAct.PlayID = Role.PlayID
                                             INNER JOIN Act ON RoleInAct.PlayID = Act.PlayID AND RoleInAct.Number = Act.Number
                                             INNER JOIN Play ON Act.PlayID = Play.PlayID
-                                 WHERE Actor.Name = "Arturo Scotti") 
+                                 WHERE Actor.Name = ?) 
                       AND Act.Number IN (
                                  SELECT Act.Number
                                  FROM Actor INNER JOIN PlaysInRole ON Actor.ActorID = PlaysInRole.ActorID
                                             INNER JOIN Role ON PlaysInRole.RoleID = Role.RoleID
                                             INNER JOIN RoleInAct ON Role.RoleID = RoleInAct.RoleID AND RoleInAct.PlayID = Role.PlayID
                                             INNER JOIN Act ON RoleInAct.PlayID = Act.PlayID AND RoleInAct.Number = Act.Number
-                                 WHERE Actor.Name = "Arturo Scotti");
+                                 WHERE Actor.Name = ?);''', (ActorName, ActorName,))
+        result = c.fetchall()
+        return result
+    except sqlite3.Error as e:
+        print(f'An error occured {e}') 
+    finally: 
+        conn.close()
+
+print(FindCoActors('Arturo Scotti'))
