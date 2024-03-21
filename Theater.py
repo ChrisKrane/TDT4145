@@ -11,7 +11,7 @@ def createDatabase():
 
     sqlCommands = sqlAsAString.split(";") # split the commands by semicolon
 
-    ## Execute every command from the input file
+    # Execute every command from the input file
     for command in sqlCommands:
         try:
             cursor.execute(command)

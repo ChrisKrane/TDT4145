@@ -1,5 +1,8 @@
 import sqlite3
 
+#Takes an actor name in and finds all co actors performing in the same acts as the input actor. 
+#Returns name of co actor, which act they play together in and the name of the play
+# (Solves use case 7)
 def FindCoActors(ActorName):  
     try: 
         conn = sqlite3.connect('Theater.db')

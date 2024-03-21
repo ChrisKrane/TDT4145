@@ -1,5 +1,6 @@
 import sqlite3
 
+#Reads the "Insertion.sql" file and feeds data into the empty "Theater.db" database
 def initializeDatabase():
     try:
         connection = sqlite3.connect("Theater.db")

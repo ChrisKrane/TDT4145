@@ -1,5 +1,8 @@
 import sqlite3
 
+# Uses SQL-query to find the best selling performance. Returns name on play, date of play and number of sold tickets 
+# (Solves user case 6)
+
 def FindBestPerformance(): 
     try: 
         conn = sqlite3.connect('Theater.db')
@@ -18,4 +21,5 @@ def FindBestPerformance():
     finally: 
         conn.close()
 
+print(FindBestPerformance())
 

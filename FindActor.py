@@ -1,5 +1,7 @@
 import sqlite3
 
+#Uses SQL-query to find name on play, actor and the role of the actor 
+#(solves use case 5)
 def FindActor(): 
     try: 
         conn = sqlite3.connect('Theater.db')

@@ -6,7 +6,7 @@
 --    Nikolai Thougaard
 
 -- Insert data
-INSERT INTO Theater VALUES (1, 'Trøndelag Teater', 'Trondheim');
+INSERT INTO Theater VALUES (1, 'Trondelag Teater', 'Trondheim');
 
 INSERT INTO TheaterHall VALUES (1, 'Hovedscenen', 524, 1);
 INSERT INTO TheaterHall VALUES (2, 'Gamle scene', 332, 1);
@@ -15,7 +15,7 @@ INSERT INTO TheaterHall VALUES (4, 'Teaterkjelleren', 60, 1);
 INSERT INTO TheaterHall VALUES (5, 'Teaterkafeen', 100, 1);
 
 INSERT INTO Play VALUES (1, 'Kongsemnene av Henrik Ibsen', 450, 380, 280, null, 420, 360, 'winter', 1);
-INSERT INTO Play VALUES (2, 'Størst av alt er kjærligheten av Jonas Corell Petersen', 350, 300, 220, 220, 320, 270, 'winter', 2);
+INSERT INTO Play VALUES (2, 'Storst av alt er kjaerligheten av Jonas Corell Petersen', 350, 300, 220, 220, 320, 270, 'winter', 2);
 
 INSERT INTO Performance VALUES (1, '2024-02-01', '19:00', 1);
 INSERT INTO Performance VALUES (2, '2024-02-02', '19:00', 1);
@@ -37,60 +37,60 @@ INSERT INTO Employee VALUES (4, 'stokke@theater.no', 'Mina Rype Stokke', 'Innlei
 
 INSERT INTO Employee VALUES (5, 'petersen@theater.no', 'Jonas Corell Petersen', 'Innleid', 2);
 INSERT INTO Employee VALUES (6, 'gehrt@theater.no', 'David Gehrt', 'Midlertidig ansatt', 2);
-INSERT INTO Employee VALUES (7, 'tønder@theater.no', 'Gaute Tønder', 'Innleid', 2);
+INSERT INTO Employee VALUES (7, 'tonder@theater.no', 'Gaute Tonder', 'Innleid', 2);
 INSERT INTO Employee VALUES (8, 'mikaelsen@theater.no', 'Magnus Mikaelsen', 'Innleid', 2);
 INSERT INTO Employee VALUES (9, 'spender@theater.no', 'Kristoffer Spender', 'Innleid', 2);
 
-INSERT INTO Task VALUES (1, 'Regissør');
+INSERT INTO Task VALUES (1, 'Regissor');
 INSERT INTO Task VALUES (2, 'Scenografi');
 INSERT INTO Task VALUES (3, 'Kostyme');
 INSERT INTO Task VALUES (4, 'Lysdesign');
 INSERT INTO Task VALUES (5, 'Dramaturg');
 INSERT INTO Task VALUES (6, 'Musikalsk ansvarlig');
 
-INSERT INTO Role VALUES (1, 'Haakon Haakonssønn', 1);
+INSERT INTO Role VALUES (1, 'Haakon Haakonssonn', 1);
 INSERT INTO Role VALUES (2, 'Inga fra Vartejg (Haakons mor)', 1);
 INSERT INTO Role VALUES (3, 'Skule jarl', 1);
 INSERT INTO Role VALUES (4, 'Fru Ragnhild (Skules hustru)', 1);
 INSERT INTO Role VALUES (5, 'Margrete (Skules datter)', 1);
-INSERT INTO Role VALUES (6, 'Sigrid (Skules søster)', 1);
-INSERT INTO Role VALUES (7, 'Ingebjørg', 1);
+INSERT INTO Role VALUES (6, 'Sigrid (Skules soster)', 1);
+INSERT INTO Role VALUES (7, 'Ingebjorg', 1);
 INSERT INTO Role VALUES (8, 'Biskop Nikolas', 1);
-INSERT INTO Role VALUES (9, 'Gregorius Jonssønn', 1);
+INSERT INTO Role VALUES (9, 'Gregorius Jonssonn', 1);
 INSERT INTO Role VALUES (10, 'Paal Flida', 1);
-INSERT INTO Role VALUES (11, 'Trønder', 1);
+INSERT INTO Role VALUES (11, 'Tronder', 1);
 INSERT INTO Role VALUES (12, 'Baard Bratte', 1);
 INSERT INTO Role VALUES (13, 'Jatgeir Skald', 1);
 INSERT INTO Role VALUES (14, 'Dagfinn Bonde', 1);
-INSERT INTO Role VALUES (15, 'Peter (prest og Ingebjørgs sønn)', 1);
+INSERT INTO Role VALUES (15, 'Peter (prest og Ingebjorgs sonn)', 1);
 
 INSERT INTO Role VALUES (16, 'Sunniva Du Mond Nordal', 2);
 INSERT INTO Role VALUES (17, 'Jo Saberniak', 2);
 INSERT INTO Role VALUES (18, 'Marte M. Steinholt', 2);
 INSERT INTO Role VALUES (19, 'Tor Ivar Hagen', 2);
-INSERT INTO Role VALUES (20, 'Trond-Ove Skrødal', 2);
-INSERT INTO Role VALUES (21, 'Natalie Grøndahl Tangen', 2);
-INSERT INTO Role VALUES (22, 'Åsmund Flaten', 2);
+INSERT INTO Role VALUES (20, 'Trond-Ove Skrodal', 2);
+INSERT INTO Role VALUES (21, 'Natalie Grondahl Tangen', 2);
+INSERT INTO Role VALUES (22, 'Aasmund Flaten', 2);
 
 INSERT INTO Actor VALUES (1, 'Arturo Scotti');
-INSERT INTO Actor VALUES (2, 'Ingunn Beate Strige Øyen');
+INSERT INTO Actor VALUES (2, 'Ingunn Beate Strige Oyen');
 INSERT INTO Actor VALUES (3, 'Hans Petter Nilsen');
-INSERT INTO Actor VALUES (4, 'Madeleine Brandtzæg Nilsen');
-INSERT INTO Actor VALUES (5, 'Synnøve Fossum Eriksen');
+INSERT INTO Actor VALUES (4, 'Madeleine Brandtzaeg Nilsen');
+INSERT INTO Actor VALUES (5, 'Synnove Fossum Eriksen');
 INSERT INTO Actor VALUES (6, 'Emma Caroline Deichmann');
 INSERT INTO Actor VALUES (7, 'Thomas Jensen Takyi');
 INSERT INTO Actor VALUES (8, 'Per Bogstad Gulliksen');
-INSERT INTO Actor VALUES (9, 'Isak Holmen Sørensen');
+INSERT INTO Actor VALUES (9, 'Isak Holmen Sorensen');
 INSERT INTO Actor VALUES (10, 'Fabian Heidelberg Lunde');
 INSERT INTO Actor VALUES (11, 'Emil Olafsson');
-INSERT INTO Actor VALUES (12, 'Snorre Ryen Tøndel');
+INSERT INTO Actor VALUES (12, 'Snorre Ryen Tondel');
 INSERT INTO Actor VALUES (13, 'Sunniva Du Mond Nordal');
 INSERT INTO Actor VALUES (14, 'Jo Saberniak');
 INSERT INTO Actor VALUES (15, 'Marte M. Steinholt');
 INSERT INTO Actor VALUES (16, 'Tor Ivar Hagen');
-INSERT INTO Actor VALUES (17, 'Trond-Ove Skrødal');
-INSERT INTO Actor VALUES (18, 'Natalie Grøndahl Tangen');
-INSERT INTO Actor VALUES (19, 'Åsmund Flaten');
+INSERT INTO Actor VALUES (17, 'Trond-Ove Skrodal');
+INSERT INTO Actor VALUES (18, 'Natalie Grondahl Tangen');
+INSERT INTO Actor VALUES (19, 'Aasmund Flaten');
 
 INSERT INTO Act VALUES (1, 1, null);
 INSERT INTO Act VALUES (1, 2, null);

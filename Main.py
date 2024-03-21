@@ -3,6 +3,7 @@ from InitializeTheater import initializeDatabase
 from InputSeats import motherLode
 import sqlite3
 
+#This is the script that runs the program
 def main():
     print("--------------------")
     print("Welcome to the Theater Database")
@@ -37,6 +38,7 @@ def main():
         else:
             print("Invalid input, try again")
 
+#Help commands
 def help():
     print("'-init' : Create a new database")
     print("'-fill' : Fill a database with sample data")

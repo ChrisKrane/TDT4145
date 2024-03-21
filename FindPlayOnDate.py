@@ -1,5 +1,8 @@
 import sqlite3
 
+#Finds, with the help of a SQL-query, which plays on a given date that is available. 
+#It returns the name of the play and sold seats on the given performance
+#(Solves use case 4)
 def FindPlayOnDate(date): 
     try: 
         conn = sqlite3.connect('Theater.db')

@@ -1,21 +1,20 @@
-# Filstruktur og oppskrift 
-Hei og velkommen til vår theater-database. Dette er en oppskrift på hvordan programmet vårt skal kjøres, 
-samt en oversikt over filene vi bruker. 
+# File Structure and Recipe
+Hello and welcome to our theater database. This is a recipe for how our program should be executed, as well as an overview of the files we use.
 
-### Oversikt over filer: 
-- Theater.db: Dette er den tomme databasefilen som få matet inn data når man kjører programmet. 
-- Theater.sql: Dette er sql filen som oppretter alle tabellene i databasen vår. 
-- Insertion.sql: Dette er sql filen som setter inn data gitt i oppgaven. 
-- Main.py: Python fil som kjører programmet i terminalen. 
-- InitializeTheater.py: Python fil som leser inn "Insertion.sql" og mater dataen inn i "Theater.db". Dette er da filen som løser brukstilfelle 1. 
-- InputSeats.py: Python fil som leser inn hjelpefilene gitt i oppgaven, "gamle-scene.txt" og "hovedscenen.txt". Ved hjelp av disse setter filen stolene inn i databasen. I tillegg er det denne filen som legger inn opptatte seter på gitt dato i hjelpefilene (brukstilfelle 2). Standardbrukeren som står for kjøpet av de opptatte setene opprettes også i denne filen. 
-- FindSeats.py: Løser brukstilfelle 3. Den finner 9 ledige stoler på samme rad til og returnerer summen av hva disse billettene koster. 
-- FindPlayOnDate.py: Løser brukstilfelle 4 der det tas inn en dato og returneres hvilke forestillinger som spilles og antall billetter solgt denne datoen. 
-- FindActor.py: Løser brukstilfelle 5. Dette skulle egentlig bare være en sql fil, men siden vi har valgt å løse programmet slik at alt kjøres i terminalen, så har vi laget et python script for denne også. 
-- FindBestPerformance.py: Løser brukstilfelle 6. Funksjonen finner hvilke forestillinger som har solgt flest billetter, der antall solgte billetter er sortert i synkende rekkefølge. Dette også skal bare være en SQL-fil, men vi har valgt å løse denne på samme måte som forrige oppgave pga at det skal kjøres i terminalen. 
-- FindCoActors.py: Løser brukstilfelle 7. Tar inn et skuespillernavn og returnerer navnet på skuespilleren, hvilken akt og hvilket skuespill dette skjedde. 
+### Overview of Files:
+- Theater.db: This is the empty database file that receives data when the program is executed.
+- Theater.sql: This is the SQL file that creates all the tables in our database.
+- Insertion.sql: This is the SQL file that inserts data provided in the assignment.
+- Main.py: Python file that runs the program in the terminal.
+- InitializeTheater.py: Python file that reads "Insertion.sql" and feeds the data into "Theater.db". This is the file that solves use case 1.
+- InputSeats.py: Python file that reads the provided auxiliary files in the assignment, "gamle-scene.txt" and "hovedscenen.txt". Using these, the file inserts the seats into the database. Additionally, this file adds occupied seats on a given date in the auxiliary files (use case 2). The default user responsible for purchasing the occupied seats is also created in this file.
+- FindSeats.py: Solves use case 3. It finds 9 available seats in the same row and returns the sum of what these tickets cost.
+FindPlayOnDate.py: Solves use case 4 where a date is input and returns which performances are playing and the number of tickets sold on that date.
+- FindActor.py: Solves use case 5. This was supposed to be just an SQL file, but since we have chosen to solve the program so that everything runs in the terminal, we have created a Python script for this as well.
+- FindBestPerformance.py: Solves use case 6. The function finds which performances have sold the most tickets, where the number of tickets sold is sorted in descending order. This should also be just an SQL file, but we have chosen to solve this in the same way as the previous task because it is to be run in the terminal.
+- FindCoActors.py: Solves use case 7. Takes in an actor's name and returns the name of the co-actor, which act, and which play this occurred in.
 
-### Oppskrift på hvordan man bruker programmet
-- Åpne "Main.py"
-- Kjør programmet og følg instruksene gitt i terminalen:)
+### Recipe for Using the Program
+1. Open "Main.py".
+2. Run the program and follow the instructions provided in the terminal:)
 
