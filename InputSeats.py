@@ -49,6 +49,7 @@ def inputScene(filename):
 
         now = datetime.now()
         currentTime = now.strftime("%H:%M:%S")
+        currentTime = currentTime[:5]
 
         if(filename == "files/hovedscenen.txt"):
             seatNumber = 0

@@ -1,6 +1,7 @@
 from Theater import createDatabase
 from InitializeTheater import initializeDatabase
 from InputSeats import motherLode
+from BookTickets import bookTickets
 import sqlite3
 
 #This is the script that runs the program
@@ -30,6 +31,9 @@ def main():
         elif choice == "-open":
             #openDatabase()
             print("Not implemented yet")
+        elif choice == "-book":
+            print("Booking tickets...")
+            print("Total price: ", bookTickets())
         elif choice == "-help":
             help()
         elif choice == "-q":
@@ -47,3 +51,8 @@ def help():
     print("'-help' : for a list of commands")
 
 main()
+
+
+    #name = input("Enter name: ")
+    #phone = input("Enter phone number: ")
+    #address = input("Enter address: ")
