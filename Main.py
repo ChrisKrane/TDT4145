@@ -100,7 +100,7 @@ def formatBestPerformance(input):
 def formatCoActors(input):
     for element in input:
         if element[0] != element[1]:
-            print(f"Co-actor: {element[1]}, Act: {element[2]}, Play: {element[3]}")
+            print(f"Co-actor: {element[1]}, Act: {element[3]}, Play: {element[2]}")
 
 
 main()
