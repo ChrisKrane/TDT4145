@@ -3,10 +3,10 @@ import sqlite3
 #Reads the "Insertion.sql" file and feeds data into the empty "Theater.db" database
 def initializeDatabase():
     try:
-        connection = sqlite3.connect("Theater.db")
+        connection = sqlite3.connect("./Theater.db")
         cursor = connection.cursor()
 
-        with open("Insertion.sql", "r") as sqlFile:
+        with open("./SQL_Files/Insertion.sql", "r") as sqlFile:
             sqlAsAString = sqlFile.read()
 
         cursor.executescript(sqlAsAString)

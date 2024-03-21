@@ -3,9 +3,9 @@ import sqlite3
 # Uses SQL-query to find the best selling performance. Returns name on play, date of play and number of sold tickets 
 # (Solves user case 6)
 
-def FindBestPerformance(): 
+def findBestPerformance(): 
     try: 
-        conn = sqlite3.connect('Theater.db')
+        conn = sqlite3.connect('./Theater.db')
         c = conn.cursor()
         c.execute(f'''SELECT Play.PlayName AS Play,
                              Performance.Date AS Date,
@@ -15,11 +15,10 @@ def FindBestPerformance():
                       GROUP BY Play.PlayName, Performance.Date
                       ORDER BY Sold_seats DESC;''')
         result = c.fetchall()
-        return result
+        
     except sqlite3.Error as e:
         print(f'An error occured {e}') 
     finally: 
         conn.close()
-
-print(FindBestPerformance())
+    return result
 

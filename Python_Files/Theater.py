@@ -1,11 +1,11 @@
 import sqlite3
 
 def createDatabase():
-    connection = sqlite3.connect("Theater.db")
+    connection = sqlite3.connect("./Theater.db")
     cursor = connection.cursor()
 
     # Separate the commands from the sql file
-    sqlFile = open("Theater.sql", "r")
+    sqlFile = open("./SQL_Files/Theater.sql", "r")
     sqlAsAString = sqlFile.read()
     sqlFile.close()
 
