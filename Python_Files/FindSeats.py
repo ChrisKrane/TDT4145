@@ -1,7 +1,7 @@
 import sqlite3
 
 def findSeats():    
-    connection = sqlite3.connect('Theater.db')
+    connection = sqlite3.connect('./Theater.db')
     cursor = connection.cursor()
     try:
         # Finds the number of unoccupied seats per row and area
@@ -36,11 +36,8 @@ def findSeats():
                 for j in range(9):
                     availableSeats.append(rowInfo[j])
                 break
+        return availableSeats
     except sqlite3.Error as msg:
         print("An error occurred: ", msg)
     finally:
         connection.close()
-
-    return availableSeats
-
-findSeats()

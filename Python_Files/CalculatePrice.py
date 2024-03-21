@@ -3,7 +3,7 @@ import sqlite3
 def calculatePrice(ticketID):
     price = 0
     try:
-        connection = sqlite3.connect('Theater.db')
+        connection = sqlite3.connect('./Theater.db')
         cursor = connection.cursor()
 
         # Find the price of a ticket wit the given ticketID

@@ -1,15 +1,17 @@
-from FindSeats import findSeats
-from NewTicket import newTicket
-from NewCostumerProfile import newCostumerProfile
-from CalculatePrice import calculatePrice
+from .FindSeats import findSeats
+from .NewTicket import newTicket
+from .NewCostumerProfile import newCostumerProfile
+from .CalculatePrice import calculatePrice
 
 def bookTickets():
     # Creates a new costumer profile
     newCostumerProfile("Trond Teatersønn", "12345678", "Forestillingsalleen 13")
-    # Finds the first available seats
+
+    # Finds the first available seats and stores their IDs in a list
     freeSeats = findSeats()
     ticketIDs = []
 
+    # Books tickets for the available seats
     for i in range(len(freeSeats)):
         seatNumber = freeSeats[i][0]
         rowNumber = freeSeats[i][1]

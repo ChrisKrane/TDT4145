@@ -3,7 +3,7 @@ import sqlite3
 def newCostumerProfile(name, phone, address):
     
     try:
-        connection = sqlite3.connect("Theater.db")
+        connection = sqlite3.connect("./Theater.db")
         cursor = connection.cursor()
 
         # Find the number of costumer profiles in the database and add 1 to get the new CostumerProfileID
@@ -17,6 +17,5 @@ def newCostumerProfile(name, phone, address):
                        (ID, phone, name, address))
         connection.commit()
         connection.close()
-        print("Costumer profile created successfully")
     except sqlite3.Error as msg:
         print("An error occurred: ", msg)

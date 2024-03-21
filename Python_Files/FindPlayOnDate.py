@@ -3,9 +3,9 @@ import sqlite3
 #Finds, with the help of a SQL-query, which plays on a given date that is available. 
 #It returns the name of the play and sold seats on the given performance
 #(Solves use case 4)
-def FindPlayOnDate(date): 
+def findPlayOnDate(date): 
     try: 
-        conn = sqlite3.connect('Theater.db')
+        conn = sqlite3.connect('./Theater.db')
         c = conn.cursor()
         c.execute(f'''SELECT Play.PlayName, COUNT(Ticket.TicketID) AS Sold_seats
                     FROM Play LEFT JOIN Performance ON Play.PlayID = Performance.PlayID

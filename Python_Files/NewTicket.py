@@ -7,7 +7,7 @@ def newTicket(date, time, seatnumber, rownumber, area):
     ticketID = 0
 
     try:
-        connection = sqlite3.connect('Theater.db')
+        connection = sqlite3.connect('./Theater.db')
         cursor = connection.cursor()
 
         # Find the performanceID and playID
@@ -15,7 +15,6 @@ def newTicket(date, time, seatnumber, rownumber, area):
             "SELECT * FROM Performance WHERE Date = '2024-02-03' AND Time = '18:30'"
         )
         ticketInfo = cursor.fetchall()
-        print(ticketInfo)
         performanceID = ticketInfo[0][0]
         playID = ticketInfo[0][3]
 
